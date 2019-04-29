@@ -1,0 +1,44 @@
+.historycity
+  padding: 1%
+
+  +element('title')
+    @extend %pageMainTitle
+
+  +element('content')
+
+    & article:nth-child(4),
+    & article:nth-child(6),
+    & article:nth-child(7)
+
+      & figure
+        margin: 0 0 1% 1%
+        float: right
+
+    +modifier('article')
+      clear: both
+
+      +modifier('title')
+        margin: 2% 0 1% 0
+        font-size: 1.5em
+        font-weight: 600
+
+      +modifier('text')
+        margin-bottom: 1%
+        line-height: 1.2
+        text-align: justify
+
+      +modifier('figure')
+        width: 30%
+        margin: 0 1% 1% 0
+        padding: .25%
+        font-size: .8em
+        text-align: center
+        border: 1px solid #bbb
+        border-radius: 3px
+        float: left
+        shape-outside: margin-box
+        clear: both
+
+        +modifier('img')
+          width: 100%
+          object-fit: contain

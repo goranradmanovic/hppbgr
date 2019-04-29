@@ -1,0 +1,28 @@
+.home
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  padding: 2%
+
+  +element('title')
+    @extend %pageMainTitle
+    margin-top: 2%
+
+  +element('img')
+    width: 45%
+    height: auto
+    object-fit: contain
+
+  +element('content')
+    width: 53%
+    text-align: justify
+
+    +modifier('text')
+      margin-bottom: 20px
+      font-size: 1.35em
+      line-height: 1.2
+      color: $text-color
+
+      +modifier('lead')
+        font-weight: bold

@@ -1,0 +1,38 @@
+.images
+  padding: 1%
+
+  +element('title')
+    @extend %pageMainTitle
+
+    +modifier('backbtn')
+      position: relative
+      padding: 0 1%
+      float: left
+      text-decoration: none
+      color: $title-color
+      transition: all 800ms ease-in-out
+
+      &:hover
+        right: .25%
+        color: $text-color
+
+  +element('slider')
+
+  +element('container')
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+    +modifier('thumbnails')
+      width: 24%
+      height: 200px
+      margin: .5%
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      cursor: pointer
+      transition: opacity 400ms ease-in-out
+
+      &:hover
+        opacity: .8

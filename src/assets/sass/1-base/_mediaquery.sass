@@ -1,0 +1,307 @@
+@media only screen and (max-width: 425px), (max-width: 375px), (max-width: 320px)
+
+  //Body
+  html, body
+    width: 100vw
+
+  //Grid Lyout
+  .grid
+    grid-template-rows: repeat(4, 1fr)
+
+    //Main Header Section
+    +element('header')
+
+      +modifier('container')
+        flex-wrap: wrap
+        height: 50px
+        padding: 0
+
+        +modifier('pinned')
+          background-color: transparent
+
+        +modifier('logo')
+          display: none
+
+        +modifier('mobile')
+          display: flex
+          justify-content: flex-end
+          align-items: center
+          flex-wrap: wrap
+          padding-right: 10px
+          width: 100%
+          height: 50px
+          color: white
+          transition: background-color 400ms ease-in-out
+
+          &.open
+            background-color: rgba(0, 0, 0, .8)
+
+          +modifier('btn')
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            width: 45px
+            height: 45px
+
+            +modifier('bar')
+              display: block
+              width: 45px
+              height: 5px
+              background-color: white
+
+              &.clicked
+                opacity: .8
+
+        +modifier('nav')
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
+          width: 100%
+          transform: translate(0, -350px)
+          background-color: rgba(0, 0, 0, .8)
+          transition: all 400ms ease-in-out
+
+          &.open
+            transform: translate(0, 0)
+
+          +modifier('item')
+            width: 100%
+            font-size: 1.5em
+            line-height: 2
+            text-decoration: none
+            text-align: center
+
+
+    //Main Content Section
+    +element('content')
+    	grid-column: span 2
+
+    //Aside Section
+    +element('aside')
+      grid-column: span 2
+      grid-row: 3
+      margin-top: 5%
+
+      +modifier('nav')
+        line-height: 2
+
+      +modifier('soundcloude')
+        iframe
+          width: 100%
+          height: auto
+
+      +modifier('links')
+
+        +modifier('item')
+          line-height: 2
+
+    //Footer Section
+    +element('footer')
+      grid-row: 4
+      height: auto
+
+      +modifier('container')
+        align-items: flex-start
+
+        +modifier('logo')
+          width: 20%
+          height: 15vh
+          order: 2
+
+        +modifier('nav')
+          width: 80%
+          height: auto
+          order: 1
+
+          +modifier('list')
+            padding: 0
+
+        +modifier('info')
+          width: 100%
+          height: auto
+          order: 3
+
+          +modifier('address')
+            justify-content: space-around
+            padding: 10px 0
+            border-left: none
+            border-top: 1px solid black
+            font-size: 1.1em
+
+            +modifier('item')
+              width: 95%
+
+
+    //Views Section
+
+    //Home page
+    .home
+
+      +element('img')
+        width: 100%
+        margin-bottom: 5%
+
+      +element('content')
+        width: 100%
+
+    //Priesthood page
+    .priesthood
+
+      +element('content')
+
+        +modifier('img')
+          width: 60%
+          margin: 0 auto 20px auto
+
+        +modifier('wrapper')
+          width: 100%
+
+          +modifier('title')
+            text-align: center
+    //Gallery
+    .gallery
+
+      +element('container')
+
+        +modifier('figure')
+          width: 100%
+
+    //Images
+    .images
+
+      +element('container')
+
+        +modifier('thumbnails')
+          width: 100%
+
+    //Videos
+    .video
+
+      +element('container')
+
+        +modifier('media')
+          width: 100%
+
+          +modifier('title')
+            margin: 2.5% 0 .5% 0
+
+    //Contact page
+    .contact
+      padding: 2%
+
+      +element('form')
+        width: 100%
+        margin-bottom: 15%
+
+        +modifier('btn')
+          width: 40%
+
+      +element('map')
+        width: 100%
+
+@media only screen and (max-width: 768px)
+
+  //Body
+  html, body
+    width: 100vw
+
+  .grid__aside--soundcloude
+    iframe
+      width: 100%
+      height: auto
+
+  .home
+
+    +element('img')
+      width: 100%
+      margin-bottom: 5%
+
+    +element('content')
+      width: 100%
+
+  //Priesthood page
+  .priesthood
+
+    +element('content')
+
+      +modifier('img')
+        width: 60%
+        margin: 0 auto 20px auto
+
+      +modifier('wrapper')
+        width: 100%
+
+        +modifier('title')
+          text-align: center
+
+  .calendar
+
+    +element('form')
+      width: 100%
+
+    +element('table')
+      display: flex
+      flex-wrap: wrap
+
+      +modifier('thead')
+        display: flex
+        width: 100%
+
+        +modifier('row')
+          display: flex
+          width: 100%
+          height: auto
+          padding: 1% 0
+          border-bottom: 1px solid #bbb
+
+          & th
+            display: block
+            width: calc(100% / 5)
+
+      +modifier('tbody')
+        display: flex
+        flex-wrap: wrap
+
+        +modifier('row')
+          display: flex
+          flex-wrap: wrap
+          width: 100%
+          height: auto
+          padding: 1% 0
+          border-bottom: 1px solid #ddd
+
+          & td
+            display: block
+            width: 100%
+
+  .gallery
+
+    +element('container')
+
+      +modifier('figure')
+        width: 45%
+
+  .images
+
+    +element('container')
+
+      +modifier('thumbnails')
+        width: 45%
+
+  //Videos
+  .video
+
+    +element('container')
+
+      +modifier('media')
+        width: 49%
+
+  .contact
+    padding: 2%
+
+    +element('form')
+      width: 100%
+      margin-bottom: 15%
+
+    +element('map')
+      width: 100%

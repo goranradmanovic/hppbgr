@@ -1,0 +1,64 @@
+// All elemets
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'PT-Serif', serif
+  font-weight: 400
+  scroll-behavior: smooth
+  //Dodati naknadno na kraju da se dobije smooth scroling
+
+// Selection colors (easy to forget)
+::selection
+  background: $selection-color
+
+::-moz-selection
+  background: $selection-color
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+body
+  -webkit-tap-highlight-color: $selection-color
+
+
+// Browser scroller bar
+body::-webkit-scrollbar
+  width: 12px
+
+body::-webkit-scrollbar-track
+  background-color: #ddd
+
+body::-webkit-scrollbar-thumb
+  background-color: #777
+
+
+// Basic Styles
+html, body
+    width: calc(100vw - 12px)
+    height: 100vh
+
+body
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+  font-family: "Roboto", sans-serif
+  background-position: center
+  background-color: $bg-bodyColor
+  //background-color: #FFF
+  //background-image: url('./assets/images/body-img/bg.webp')
+  //background-repeat: no-repeat
+  //background-position: center
+  //background-size: contain
+  //background-color: #f5f5f5
+  //background-blend-mode: overlay
+
+%pageMainTitle
+  width: 100%
+  font-family: "Monah5", serif
+  margin-bottom: 5%
+  font-size: 3em
+  text-align: center
+  color: $title-color

@@ -1,0 +1,31 @@
+.priesthood
+  padding: .5%
+
+  +element('title')
+    @extend %pageMainTitle
+
+  +element('content')
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 20px
+    padding: 2px
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .2)
+
+    +modifier('img')
+      width: 20%
+      padding: 1px
+      border: 1px solid #a89554
+      border-radius: 3px
+
+    +modifier('wrapper')
+      width: 78%
+      text-align: justify
+
+      & div
+        margin-bottom: 5px
+
+      +modifier('title')
+        font-size: 1.5em
+        font-weight: 500s

@@ -1,0 +1,63 @@
+%flexbox-container
+	display: flex
+	justify-content: space-around
+	align-items: center
+	flex-wrap: wrap
+	width: 100%
+
+.grid__aside
+	grid-column: 2
+	grid-row: 2
+	padding: 10px
+
+	+modifier('nav')
+		//padding: 25% 1% 0 1%
+		margin-top: 15%
+		padding: 10% 1% 0 1%
+		list-style-type: none
+		line-height: 1.5
+		text-align: center
+		//background-image: url('../assets/icons/aside-ornament.webp')
+		background-image: url('../assets/icons/divider-ornament.webp')
+		background-position: top
+		background-size: 100%
+		background-repeat: no-repeat
+
+		+modifier('item')
+			font-size: 1.1em
+			text-decoration: none
+			color: $text-color
+
+			&:hover
+				text-decoration: underline
+
+	+modifier('divider')
+		width: 100%
+		height: 20px
+		margin: 5% auto
+		background-image: url('../assets/icons/divider-ornament.webp')
+		background-position: top
+		background-size: 100%
+		background-repeat: no-repeat
+
+	+modifier('title')
+		margin-bottom: 5%
+		font-family: "Monah5", serif
+		text-align: center
+
+	+modifier('churchcalendar')
+		@extend %flexbox-container
+
+	+modifier('links')
+
+		+modifier('item')
+			display: block
+			width: 100%
+			font-size: 1.1em
+			line-height: 1.5
+			text-decoration: none
+			text-align: center
+			color: $text-color
+
+			&:hover
+				text-decoration: underline

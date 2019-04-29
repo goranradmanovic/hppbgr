@@ -1,0 +1,68 @@
+.calendar
+  padding: 1%
+
+  +element('title')
+    @extend %pageMainTitle
+
+  +element('form')
+    width: 15%
+    margin-bottom: 30px
+
+    +modifier('select')
+      width: 100%
+      padding: 5px
+      border-radius: 3px
+      cursor: pointer
+      background-color: $bg-bodyColor
+      transition: box-shadow 300ms ease-in
+
+      &:focus
+        outline: none
+
+      &:hover
+        box-shadow: 0 0 3px rgba(0, 0, 0, .3)
+
+  +element('table')
+    width: 100%
+    //border: 1px solid #333
+    border-collapse: collapse
+
+    +modifier('col1')
+      width: 10%
+
+    +modifier('col2')
+      width: 12%
+
+    +modifier('col3')
+      width: 7%
+
+    +modifier('col4')
+      width: auto
+
+    +modifier('col5')
+      width: 4%
+
+    +modifier('thead')
+
+      +modifier('row')
+        height: 3vh
+        background-color: #dbdbdb
+
+    +modifier('tbody')
+
+      +modifier('row')
+        height: 4vh
+        text-align: center
+        transition: background-color 400ms ease
+
+        &:nth-child(odd)
+          background-color: #ededed
+
+        &:nth-child(even)
+          background-color: #e9e9e9
+
+        &:hover
+          background-color: #e4e4e4
+
+        &.text__red
+          color: #FF0000

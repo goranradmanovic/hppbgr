@@ -1,0 +1,85 @@
+.grid__footer
+	grid-column: span 2
+	grid-row: 3
+	background-color: $bg-footer
+	color: white
+
+	+modifier('container')
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+
+		+modifier('logo')
+			width: 25%
+			height: 200px
+			background-image: url('../assets/images/header-img/cross.webp')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 60%
+
+		+modifier('nav')
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 25%
+			padding: 2.5%
+
+			+modifier('list')
+				width: 100%
+				padding: 5%
+				line-height: 2
+				list-style-type: none
+
+				+modifier('item')
+
+					&::before
+						content: "\2671"
+
+					+modifier('link')
+						padding-left: 3px
+						font-size: .95em
+						font-weight: 600
+						text-transform: uppercase
+						text-decoration: none
+						color: $text-color
+						color: white
+
+						&:hover
+							text-decoration: underline
+
+		+modifier('info')
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 50%
+			padding: .5%
+
+			+modifier('address')
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				width: 100%
+				padding-left: 10%
+				border-left: 1px solid white
+				font-size: 1.2em
+				line-height: 1.5
+
+				+modifier('item')
+					width: 100%
+
+					+modifier('email')
+						text-decoration: none
+						color: $text-color
+						color: white
+
+						&:hover
+							text-decoration: underline
+							
+					+modifier('link')
+						text-decoration: none
+						color: $text-color
+						color: white
+
+						&:hover
+							text-decoration: underline
