@@ -22,6 +22,12 @@
       &:hover
         box-shadow: 0 0 3px rgba(0, 0, 0, .3)
 
+      +modifier('option')
+        color: $title-color
+        
+        &:focus
+          outline: none
+
   +element('table')
     width: 100%
     //border: 1px solid #333
@@ -53,6 +59,7 @@
       +modifier('row')
         height: 4vh
         text-align: center
+        color: $text-color
         transition: background-color 400ms ease
 
         &:nth-child(odd)
