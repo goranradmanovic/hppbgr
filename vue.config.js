@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/hppbgr/' : '/',
+  //publicPath: process.env.NODE_ENV === 'production' ? '/hppbgr/' : '/',
 
   css: {
     loaderOptions: {
