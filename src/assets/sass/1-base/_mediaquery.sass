@@ -1,5 +1,9 @@
 @media only screen and (max-width: 425px), (max-width: 375px), (max-width: 320px)
 
+  //Mobile padding
+  %mobile-padding
+    padding: 3%
+
   //Body
   html, body
     width: 100vw
@@ -34,7 +38,7 @@
           transition: background-color 400ms ease-in-out
 
           &.open
-            background-color: rgba(0, 0, 0, .8)
+            background-color: rgba(0, 0, 0, .9)
 
           +modifier('btn')
             display: flex
@@ -58,14 +62,14 @@
           justify-content: center
           width: 100%
           transform: translate(0, -350px)
-          background-color: rgba(0, 0, 0, .8)
+          background-color: rgba(0, 0, 0, .9)
           transition: all 400ms ease-in-out
 
           &.open
             transform: translate(0, 0)
 
           +modifier('item')
-            width: 100%
+            width: 65%
             font-size: 1.5em
             line-height: 2
             text-decoration: none
@@ -105,7 +109,8 @@
 
         +modifier('logo')
           width: 20%
-          height: 15vh
+          height: 64px
+          padding: 2.5%
           order: 2
 
         +modifier('nav')
@@ -125,7 +130,7 @@
             justify-content: space-around
             padding: 10px 0
             border-left: none
-            border-top: 1px solid black
+            border-top: 1px solid white
             font-size: 1.1em
 
             +modifier('item')
@@ -136,6 +141,7 @@
 
     //Home page
     .home
+      @extend %mobile-padding
 
       +element('img')
         width: 100%
@@ -146,6 +152,7 @@
 
     //Priesthood page
     .priesthood
+      @extend %mobile-padding
 
       +element('content')
 
@@ -158,8 +165,14 @@
 
           +modifier('title')
             text-align: center
+
+    //Calendar
+    .calendar
+      @extend %mobile-padding
+
     //Gallery
     .gallery
+      @extend %mobile-padding
 
       +element('container')
 
@@ -168,6 +181,7 @@
 
     //Images
     .images
+      @extend %mobile-padding
 
       +element('container')
 
@@ -176,6 +190,7 @@
 
     //Videos
     .video
+      @extend %mobile-padding
 
       +element('container')
 
@@ -187,7 +202,7 @@
 
     //Contact page
     .contact
-      padding: 2%
+      @extend %mobile-padding
 
       +element('form')
         width: 100%
@@ -198,6 +213,35 @@
 
       +element('map')
         width: 100%
+
+    //History of temple
+    .historytemple
+      @extend %mobile-padding
+
+    //History of city
+    .historycity
+      @extend %mobile-padding
+
+      +element('content')
+
+        & article:nth-child(4),
+        & article:nth-child(6),
+        & article:nth-child(7)
+
+          & figure
+            margin: 0 0 5% 0
+            float: none
+
+        +modifier('article')
+
+          +modifier('figure')
+            width: 100%
+            margin-bottom: 5%
+            float: none
+
+    //Scheduleworship
+    .scheduleworship
+      @extend %mobile-padding
 
 @media only screen and (max-width: 768px)
 
