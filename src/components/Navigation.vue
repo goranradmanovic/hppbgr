@@ -2,16 +2,6 @@
   .grid__header--container(:class='{"grid__header--container--pinned": pinned}')
     a(href="/" class='grid__header--container--logo')
       img(src='../assets/images/header-img/cross.webp' class='grid__header--container--logo--img' alt='cross.png')
-      |
-
-      //-
-        | Храм
-        br
-        | Покров
-        br
-        | Пресвете
-        br
-        | Богородице
 
     div(class='grid__header--container--mobile' ref='mobileNav')
       div(class='grid__header--container--mobile--btn' id='mobileNavBtn' @click='openMobileNav')
