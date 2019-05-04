@@ -4,7 +4,7 @@
 
     .video__container
       .video__container--media(v-for='video in videos')
-        iframe(class='video__container--media--iframe' width='100%' height='65%' :src='video.urlPath' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        iframe(loading='lazy' class='video__container--media--iframe' width='100%' height='65%' :src='video.urlPath' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
         h3(class='video__container--media--title') {{ video.title }}
         .video__container--media--date {{ video.datetime | formatVideoDate }}
 </template>
