@@ -19,7 +19,7 @@
           router-link(:to="{ name: 'home', params: {} }" target='_blank' class='grid__footer--container--info--address--item--link') Храм Покорова Пресвете Богородице
         .grid__footer--container--info--address--item &copy; Copyright {{ getCurrentYear }}
         .grid__footer--container--info--address--item  Дизајн и развој
-          a(href='https://goranradmanovic.github.io/' target='_blank' class='grid__footer--container--info--address--item--link')  ГР
+          a(href='https://goranradmanovic.github.io/' target='_blank' class='grid__footer--container--info--address--item--link') &nbsp;ГР
 </template>
 
 <script>
